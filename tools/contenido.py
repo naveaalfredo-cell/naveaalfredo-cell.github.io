@@ -8,7 +8,7 @@ Para cambiar una frase, edítala aquí y vuelve a ejecutar:  python tools/build.
 SITE_URL = "https://naveaalfredo-cell.github.io"
 # Clave de Web3Forms (web3forms.com). Sin clave, el formulario envía la
 # solicitud por WhatsApp en lugar de por correo.
-WEB3FORMS_KEY = ""
+WEB3FORMS_KEY = "d2028e0f-f655-42e5-9f42-e72b4b17facd"
 
 # Reel que aparece en el móvil de la portada.
 HERO_CLIP = "inmobiliaria-3"

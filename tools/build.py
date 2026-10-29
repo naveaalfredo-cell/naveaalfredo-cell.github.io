@@ -443,9 +443,9 @@ def render(lang):
 
 
 def main():
-    (ROOT / "index.html").write_text(render("es"), encoding="utf-8")
+    (ROOT / "index.html").write_text(render("es"), encoding="utf-8", newline=chr(10))
     (ROOT / "en").mkdir(exist_ok=True)
-    (ROOT / "en" / "index.html").write_text(render("en"), encoding="utf-8")
+    (ROOT / "en" / "index.html").write_text(render("en"), encoding="utf-8", newline=chr(10))
 
     hoy = "2026-10-29"
     (ROOT / "sitemap.xml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -461,8 +461,8 @@ def main():
     <xhtml:link rel="alternate" hreflang="en" href="{C.SITE_URL}/en/"/>
   </url>
 </urlset>
-""", encoding="utf-8")
-    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {C.SITE_URL}/sitemap.xml\n", encoding="utf-8")
+""", encoding="utf-8", newline=chr(10))
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {C.SITE_URL}/sitemap.xml\n", encoding="utf-8", newline=chr(10))
 
     es = C.T["es"]
     cats = "\n".join(f"- {c['es']['nombre']} / {c['en']['nombre']}: {c['es']['texto']}" for c in C.CATEGORIAS)
@@ -488,7 +488,7 @@ def main():
 - WhatsApp: {C.WHATSAPP_DISPLAY}
 - [Instagram {C.INSTAGRAM_HANDLE}]({C.INSTAGRAM})
 - [TikTok {C.TIKTOK_HANDLE}]({C.TIKTOK})
-""", encoding="utf-8")
+""", encoding="utf-8", newline=chr(10))
     print("index.html, en/index.html, sitemap.xml, robots.txt y llms.txt generados")
     for cat in C.CATEGORIAS:
         print(f"  {cat['es']['nombre']}: {len(videos(cat['slug']))} reels")
