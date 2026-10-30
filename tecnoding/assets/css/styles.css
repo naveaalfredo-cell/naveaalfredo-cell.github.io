@@ -50,21 +50,28 @@ button{font:inherit;color:inherit;cursor:pointer}
 .cart-count.pop{animation:pop .5s var(--ease)}
 @keyframes pop{30%{transform:scale(1.45)}}
 
-/* ---------- Productos estrella: modelo 3D real, sin disco de fondo ---------- */
-.show{position:relative;height:320vh;background:#F4F6FC}
-.show-pin{position:sticky;top:0;height:100svh;overflow:hidden}
-.show-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
-.show-fallback{position:absolute;right:8%;top:50%;transform:translateY(-50%);height:68%;width:auto;object-fit:contain}
-.js-3d .show-fallback{display:none}
+/* ---------- Productos estrella: carrusel lateral ---------- */
+.show{position:relative;height:100svh;min-height:620px;background:#F4F6FC;overflow:hidden;touch-action:pan-y}
+.show-track{position:absolute;inset:0;cursor:grab;outline:none;user-select:none}
+.show-track.is-drag{cursor:grabbing}
+.show-slide{position:absolute;inset:0;display:grid;place-items:center;padding:calc(var(--top) + 12px) 5% 70px 42%;pointer-events:none;will-change:transform,opacity;perspective:1600px}
+.show-object{position:relative;height:100%;width:100%;min-height:0;display:grid;place-items:center;transform-style:preserve-3d;will-change:transform}
+.show-object img,.show-object video{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.show-object img{mix-blend-mode:normal}
+.show-floor{display:none}
 .show-ui{position:relative;height:100%;padding:calc(var(--top) + 24px) 0 40px;display:flex;flex-direction:column;justify-content:center;pointer-events:none}
 .show-copy{display:flex;flex-direction:column;gap:16px;max-width:520px;pointer-events:auto}
 .show-tag{font-weight:800;color:var(--azul);font-size:16px}
 .show-title{font-size:clamp(2.5rem,4.2vw,4.2rem);font-weight:800;letter-spacing:-.04em;line-height:1}
 .show-spec{font-size:19px;max-width:30ch}
 .show-cta{display:flex;flex-wrap:wrap;gap:10px}
-.show-list{list-style:none;margin:0;padding:0;position:absolute;left:0;bottom:40px;display:flex;gap:8px;pointer-events:auto}
-.show-list button{border:0;background:rgba(13,16,51,.07);padding:9px 16px;border-radius:999px;font-weight:700;font-size:15px;transition:background .25s,color .25s}
-.show-list button[aria-pressed="true"]{background:var(--noche);color:#fff}
+.show-nav{position:absolute;left:0;bottom:36px;display:flex;align-items:center;gap:14px;pointer-events:auto}
+.show-nav>button{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:0;background:#fff;color:var(--noche);transition:background .2s,color .2s}
+.show-nav>button:hover{background:var(--noche);color:#fff}
+.show-nav svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.show-dots{list-style:none;margin:0;padding:0;display:flex;gap:8px}
+.show-dots button{display:block;width:26px;height:6px;padding:0;border:0;border-radius:6px;background:rgba(13,16,51,.18);transition:background .3s,width .4s var(--ease)}
+.show-dots button[aria-pressed="true"]{width:44px;background:var(--azul)}
 
 .price{display:inline-flex;align-items:center;font-weight:900;font-size:17px;color:#fff;background:var(--azul);padding:4px 14px;border-radius:999px;white-space:nowrap;font-variant-numeric:tabular-nums}
 .price-lg{font-size:clamp(22px,2vw,28px);padding:6px 20px}
@@ -84,11 +91,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 /* ---------- Riel de categorías (estilo Mi) ---------- */
 .rail{background:#fff;padding:44px 0}
 .rail-list{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(9,1fr);gap:12px}
-.rail-item{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;text-decoration:none;font-weight:700;font-size:14px;line-height:1.2}
-.rail-img{display:grid;place-items:center;width:min(100%,108px);aspect-ratio:1;border-radius:50%;background:var(--nube);transition:background .3s,transform .4s var(--ease)}
-.rail-img img{width:72%;height:72%;object-fit:contain;transition:transform .4s var(--ease)}
-.rail-item:hover .rail-img{background:var(--disco)}
-.rail-item:hover .rail-img img{transform:scale(1.12) rotate(-6deg)}
+.rail-item{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;text-decoration:none;font-weight:600;font-size:14px;line-height:1.2;padding:10px 4px;color:var(--noche);transition:color .2s,transform .25s var(--ease)}
+.rail-item svg{width:38px;height:38px}
+.rail-item:hover{color:var(--azul);transform:translateY(-3px)}
 
 /* ---------- Catálogo: fichas blancas ---------- */
 .cat{padding:clamp(64px,8vw,110px) 0;background:#F4F6FC}
@@ -259,18 +264,17 @@ button{font:inherit;color:inherit;cursor:pointer}
 @media (max-width:1100px){
   .nav{display:none}
   .top-actions{margin-left:auto}
-  .rail-list{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:96px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+  .rail-list{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:104px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
   .rail-list::-webkit-scrollbar{display:none}
   .mosaic{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media (max-width:860px){
-  .show-ui{justify-content:flex-end;padding-bottom:78px}
+  .show-ui{justify-content:flex-end;padding-bottom:88px}
   .show-copy{gap:10px}
-  .show-title{font-size:2.5rem}
+  .show-title{font-size:2.3rem}
   .show-spec{font-size:16px}
-  .show-fallback{top:calc(var(--top) + 10px);transform:none;right:50%;translate:50% 0;height:42%}
-  .show-list{bottom:20px;overflow-x:auto;max-width:100%}
-  .show-list li{flex:none}
+  .show-slide{padding:calc(var(--top) + 8px) 8% 49svh}
+  .show-nav{bottom:22px}
   .cat-head{grid-template-columns:1fr}
   .mosaic{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .steps{grid-template-columns:1fr;padding-top:24px}

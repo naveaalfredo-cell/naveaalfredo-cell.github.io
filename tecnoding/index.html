@@ -70,28 +70,29 @@
 <main>
   <h1 class="sr-only">Tecnoding, tienda de gadgets en Barinas: smartwatches, audífonos, humidificadores y más, con pedido por WhatsApp</h1>
 
-  <section class="show" id="escaparate" aria-label="Productos estrella del mes">
-    <div class="show-pin">
-      <canvas class="show-canvas" id="show-canvas" aria-hidden="true"></canvas>
-      <img class="show-fallback" id="show-img" src="assets/img/productos/t900-ultra.webp" alt="T900 Ultra" width="800" height="960">
-      <div class="wrap show-ui">
-        <div class="show-copy" id="show-copy">
-          <p class="show-tag">Lo más vendido del mes</p>
-          <h2 class="show-title" id="show-name">T900 Ultra</h2>
-          <p class="show-spec" id="show-spec">Pantalla grande, llamadas y correa deportiva.</p>
-          <p class="show-price"><span class="price price-lg" id="show-price">$15</span></p>
-          <div class="show-cta">
-            <button class="btn btn-primary" type="button" id="show-add" data-add="t900-ultra">Agregar al carrito</button>
-            <a class="btn btn-quiet" id="show-more" href="#producto/t900-ultra">Ver detalles</a>
-          </div>
+  <section class="show" id="escaparate" aria-roledescription="carrusel" aria-label="Productos estrella del mes">
+    <div class="show-track" id="show-track" tabindex="0"><div class="show-slide" data-i="0"><div class="show-object"><img src="assets/img/productos/t900-ultra.webp" alt="T900 Ultra" draggable="false" fetchpriority="high"><span class="show-floor"></span></div></div><div class="show-slide" data-i="1"><div class="show-object"><img src="assets/img/productos/serie11-clasico.webp" alt="Serie 11 clásico AAA" draggable="false" loading="lazy"><span class="show-floor"></span></div></div><div class="show-slide" data-i="2"><div class="show-object"><img src="assets/img/productos/watch7.webp" alt="Watch 7 Max" draggable="false" loading="lazy"><span class="show-floor"></span></div></div><div class="show-slide" data-i="3"><div class="show-object"><img src="assets/img/productos/hello-plum.webp" alt="Hello Plum H16 Ultra 49 mm" draggable="false" loading="lazy"><span class="show-floor"></span></div></div><div class="show-slide" data-i="4"><div class="show-object"><img src="assets/img/productos/v20-pro.webp" alt="V20 Pro con inteligencia artificial" draggable="false" loading="lazy"><span class="show-floor"></span></div></div></div>
+    <div class="wrap show-ui">
+      <div class="show-copy" id="show-copy">
+        <p class="show-tag">Lo más vendido del mes</p>
+        <h2 class="show-title" id="show-name">T900 Ultra</h2>
+        <p class="show-spec" id="show-spec">Pantalla grande, llamadas y correa deportiva.</p>
+        <p class="show-price"><span class="price price-lg" id="show-price">$15</span></p>
+        <div class="show-cta">
+          <button class="btn btn-primary" type="button" id="show-add" data-add="t900-ultra">Agregar al carrito</button>
+          <a class="btn btn-quiet" id="show-more" href="#producto/t900-ultra">Ver detalles</a>
         </div>
-        <ol class="show-list" aria-label="Elige un producto estrella"><li><button type="button" data-show="0" aria-pressed="true">T900 Ultra</button></li><li><button type="button" data-show="1" aria-pressed="false">Serie 11 clásico AAA</button></li><li><button type="button" data-show="2" aria-pressed="false">Watch 7 Max</button></li></ol>
+      </div>
+      <div class="show-nav">
+        <button type="button" id="show-prev" aria-label="Producto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <ol class="show-dots" id="show-dots"><li><button type="button" data-show="0" aria-label="T900 Ultra" aria-pressed="true"></button></li><li><button type="button" data-show="1" aria-label="Serie 11 clásico AAA" aria-pressed="false"></button></li><li><button type="button" data-show="2" aria-label="Watch 7 Max" aria-pressed="false"></button></li><li><button type="button" data-show="3" aria-label="Hello Plum H16 Ultra 49 mm" aria-pressed="false"></button></li><li><button type="button" data-show="4" aria-label="V20 Pro con inteligencia artificial" aria-pressed="false"></button></li></ol>
+        <button type="button" id="show-next" aria-label="Producto siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
       </div>
     </div>
   </section>
 
   <nav class="rail" aria-label="Categorías de la tienda">
-    <ul class="rail-list wrap"><li><a href="#smartwatches" class="rail-item" style="--disco:#3763FF"><span class="rail-img"><img src="assets/img/productos/hello-plum.webp" alt="" loading="lazy"></span>Smartwatches</a></li><li><a href="#audifonos" class="rail-item" style="--disco:#4FD8E6"><span class="rail-img"><img src="assets/img/productos/audifonos-q10.webp" alt="" loading="lazy"></span>Audífonos</a></li><li><a href="#proyectores" class="rail-item" style="--disco:#4A3FD9"><span class="rail-img"><img src="assets/img/productos/astronauta-musica.webp" alt="" loading="lazy"></span>Proyectores</a></li><li><a href="#humidificadores" class="rail-item" style="--disco:#29A8F0"><span class="rail-img"><img src="assets/img/productos/hum-luces.webp" alt="" loading="lazy"></span>Humidificadores</a></li><li><a href="#jardines" class="rail-item" style="--disco:#0D1033"><span class="rail-img"><img src="assets/img/productos/jardin-hexagonal.webp" alt="" loading="lazy"></span>Jardines infinitos</a></li><li><a href="#lamparas" class="rail-item" style="--disco:#4FD8E6"><span class="rail-img"><img src="assets/img/productos/rosas-eternas.webp" alt="" loading="lazy"></span>Lámparas</a></li><li><a href="#impresoras" class="rail-item" style="--disco:#3763FF"><span class="rail-img"><img src="assets/img/productos/combo-impresora.webp" alt="" loading="lazy"></span>Mini impresoras</a></li><li><a href="#videojuegos" class="rail-item" style="--disco:#4A3FD9"><span class="rail-img"><img src="assets/img/productos/sup-x7m.webp" alt="" loading="lazy"></span>Videojuegos</a></li><li><a href="#accesorios" class="rail-item" style="--disco:#29A8F0"><span class="rail-img"><img src="assets/img/productos/charms-correas.webp" alt="" loading="lazy"></span>Accesorios</a></li></ul>
+    <ul class="rail-list wrap"><li><a href="#smartwatches" class="rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="6" width="10" height="12" rx="3"/><path d="M9 6l.5-3.5h5L15 6M9 18l.5 3.5h5L15 18M12 10v2.4l1.6 1"/></svg>Smartwatches</a></li><li><a href="#audifonos" class="rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6.5" rx="2"/><rect x="17" y="14" width="4" height="6.5" rx="2"/></svg>Audífonos</a></li><li><a href="#proyectores" class="rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 8.5a3.5 2.5 0 0 1 7 0c0 1.4-1.6 2-3.5 2s-3.5-.6-3.5-2zM8 14l-1.5 7h11L16 14"/></svg>Proyectores</a></li><li><a href="#humidificadores" class="rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13h12l-1 6.5a2 2 0 0 1-2 1.5H9a2 2 0 0 1-2-1.5zM12 10c0-2 2-2.2 2-4s-2-2-2-3.500"/></svg>Humidificadores</a></li><li><a href="#jardines" class="rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9M12 12c-3.500 0-5-2-5-5 2 0 3 .5 3.500 1.200C11 6.500 11.500 5 12 4c.5 1 1 2.500 1.500 4.200C14 7.500 15 7 17 7c0 3-1.500 5-5 5zM12 18c-1.500-1.500-3-2-5-2 .5 2 2 3 5 3 3 0 4.500-1 5-3-2 0-3.500.5-5 2z"/></svg>Jardines infinitos</a></li><li><a href="#lamparas" class="rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.500 10.900c.6.5 1 1.200 1 2V16h5v-.1c0-.8.4-1.500 1-2A6 6 0 0 0 12 3z"/></svg>Lámparas</a></li><li><a href="#impresoras" class="rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="9" width="14" height="9" rx="3"/><path d="M8 9V4h8v5M8 15h8v6H8z"/></svg>Mini impresoras</a></li><li><a href="#videojuegos" class="rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10a5 5 0 0 1 4.800 6.300l-.8 3.200a2.600 2.600 0 0 1-4.600.8L15 16H9l-1.400 1.300a2.600 2.600 0 0 1-4.600-.8l-.8-3.200A5 5 0 0 1 7 7z"/><path d="M8 10v3M6.500 11.500h3"/><circle cx="16" cy="11" r=".6"/><circle cx="18" cy="13" r=".6"/></svg>Videojuegos</a></li><li><a href="#accesorios" class="rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8v5H8zM8 16h8v5H8z"/><rect x="6.500" y="8" width="11" height="8" rx="2"/><path d="M12 10.500v3"/></svg>Accesorios</a></li></ul>
   </nav>
 
   <section class="cat cat-nube" id="smartwatches" aria-labelledby="t-smartwatches">
@@ -1307,8 +1308,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="assets/js/catalogo.js" defer></script>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
 <script src="assets/js/main.js" defer></script>
-<script type="module" src="assets/js/estrellas.js"></script>
+<script src="assets/js/estrellas.js" defer></script>
 </body>
 </html>
