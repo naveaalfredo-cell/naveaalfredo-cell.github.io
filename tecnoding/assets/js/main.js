@@ -175,7 +175,7 @@
     $("#sheet-qty").textContent = fichaCant;
     actualizarPrecioFicha();
   }));
-  const cerrarFicha = () => { if (location.hash.startsWith("#producto/")) history.pushState("", "", location.pathname + location.search); cerrar(sheet); };
+  const cerrarFicha = () => { if (location.hash.startsWith("#producto/")) history.back(); else cerrar(sheet); };
   $("#sheet-add").addEventListener("click", () => {
     const v = $("input[name=variante]:checked", sheet), col = $("input[name=color]:checked", sheet);
     agregar(fichaId, v ? v.value : "", fichaCant, $("#sheet-img"), col ? col.value : "");
@@ -184,8 +184,14 @@
   $$("[data-close]", sheet).forEach((b) => b.addEventListener("click", cerrarFicha));
   function revisarRuta() {
     const r = location.hash.match(/^#producto\/(.+)$/);
-    if (r && C[r[1]]) abrirFicha(r[1]);
-    else if (!sheet.hidden) cerrar(sheet);
+    if (r && C[r[1]]) { abrirFicha(r[1]); return; }
+    if (!sheet.hidden) cerrar(sheet);
+    const cat = location.hash.match(/^#categoria\/(.+)$/);
+    const sec = cat && document.getElementById(cat[1]);
+    document.body.classList.toggle("vista-cat", !!sec);
+    $$(".cat").forEach((s) => s.classList.toggle("is-open", s === sec));
+    if (sec) scrollTo({ top: 0, behavior: "auto" });
+    if (window.ScrollTrigger) ScrollTrigger.refresh();
   }
   addEventListener("hashchange", revisarRuta);
 
@@ -234,6 +240,24 @@
   pintarCarrito();
 
   revisarRuta();
+
+  /* ---------- Buscador de la barra ---------- */
+  const norm = (t) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const entrada = $("#search-input"), caja = $("#search-res");
+  const indice = Object.entries(C).map(([id, p]) => ({ id, p, t: norm([p.n, p.c, ...p.s, ...p.col.map((x) => x[0])].join(" ")) }));
+  function buscar() {
+    const q = norm(entrada.value.trim());
+    if (!q) { caja.hidden = true; return; }
+    const pal = q.split(/\s+/);
+    const res = indice.filter((x) => pal.every((w) => x.t.includes(w))).slice(0, 8);
+    caja.innerHTML = res.length ? res.map(({ id, p }) => `<a href="#producto/${id}"><img src="assets/img/productos/${id}.webp" alt=""><span><b>${p.n}</b><small>${p.c}</small></span><strong>${dinero(p.v.length ? Math.min(...p.v.map((v) => v[1])) : p.p)}</strong></a>`).join("") : "<p>No encontramos ese producto. Escríbenos por WhatsApp y te ayudamos.</p>";
+    caja.hidden = false;
+  }
+  entrada.addEventListener("input", buscar);
+  entrada.addEventListener("focus", buscar);
+  $("#search").addEventListener("submit", (ev) => { ev.preventDefault(); const a = $("a", caja); if (a) { location.hash = a.getAttribute("href"); caja.hidden = true; entrada.blur(); } });
+  caja.addEventListener("click", () => { caja.hidden = true; entrada.value = ""; });
+  document.addEventListener("click", (ev) => { if (!ev.target.closest("#search")) caja.hidden = true; });
 
   /* ---------- Entradas suaves al hacer scroll ---------- */
   function animarScroll() {
