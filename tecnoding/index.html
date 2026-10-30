@@ -70,24 +70,24 @@
 <main>
   <h1 class="sr-only">Tecnoding, tienda de gadgets en Barinas: smartwatches, audífonos, humidificadores y más, con pedido por WhatsApp</h1>
 
-  <section class="show" id="escaparate" aria-label="Productos destacados">
-    <div class="show-grid wrap">
-      <ol class="show-list" aria-label="Elige un producto"><li><button type="button" class="show-name" data-show="0" aria-pressed="true">T900 Ultra</button></li><li><button type="button" class="show-name" data-show="1" aria-pressed="false">Lámpara hexagonal de girasoles</button></li><li><button type="button" class="show-name" data-show="2" aria-pressed="false">Astronauta proyector con música</button></li><li><button type="button" class="show-name" data-show="3" aria-pressed="false">Humidificador de luces</button></li><li><button type="button" class="show-name" data-show="4" aria-pressed="false">Hello Plum H16 Ultra 49 mm</button></li><li><button type="button" class="show-name" data-show="5" aria-pressed="false">Combo mini impresora</button></li></ol>
-      <div class="show-stage" id="show-stage" style="--disco:#3763FF">
-        <div class="show-disc" aria-hidden="true"></div>
-        <img class="show-img" id="show-img" src="assets/img/productos/t900-ultra.webp" alt="T900 Ultra" width="800" height="800">
-      </div>
-      <div class="show-copy" id="show-copy">
-        <h2 class="show-name" id="show-name">T900 Ultra</h2>
-        <p class="show-spec" id="show-spec">Recibe y hace llamadas · Pulso, presión y sueño</p>
-        <p class="show-price"><span class="price price-lg" id="show-price">$15</span></p>
-        <div class="show-cta">
-          <button class="btn btn-primary" type="button" id="show-add" data-add="t900-ultra">Agregar al carrito</button>
-          <button class="btn btn-quiet" type="button" id="show-more" data-open="t900-ultra">Ver detalles</button>
+  <section class="show" id="escaparate" aria-label="Productos estrella del mes">
+    <div class="show-pin">
+      <canvas class="show-canvas" id="show-canvas" aria-hidden="true"></canvas>
+      <img class="show-fallback" id="show-img" src="assets/img/productos/t900-ultra.webp" alt="T900 Ultra" width="800" height="960">
+      <div class="wrap show-ui">
+        <div class="show-copy" id="show-copy">
+          <p class="show-tag">Lo más vendido del mes</p>
+          <h2 class="show-title" id="show-name">T900 Ultra</h2>
+          <p class="show-spec" id="show-spec">Pantalla grande, llamadas y correa deportiva.</p>
+          <p class="show-price"><span class="price price-lg" id="show-price">$15</span></p>
+          <div class="show-cta">
+            <button class="btn btn-primary" type="button" id="show-add" data-add="t900-ultra">Agregar al carrito</button>
+            <a class="btn btn-quiet" id="show-more" href="#producto/t900-ultra">Ver detalles</a>
+          </div>
         </div>
+        <ol class="show-list" aria-label="Elige un producto estrella"><li><button type="button" data-show="0" aria-pressed="true">T900 Ultra</button></li><li><button type="button" data-show="1" aria-pressed="false">Serie 11 clásico AAA</button></li><li><button type="button" data-show="2" aria-pressed="false">Watch 7 Max</button></li></ol>
       </div>
     </div>
-    <div class="show-progress wrap" aria-hidden="true"><span id="show-bar"></span></div>
   </section>
 
   <nav class="rail" aria-label="Categorías de la tienda">
@@ -101,12 +101,12 @@
         <p class="cat-intro">Llamadas por Bluetooth, notificaciones, salud y pasos. Desde $15 y con la correa que te guste.</p>
       </header>
       <div class="mosaic">
-        <article class="tile tile-xl" data-id="hello-plum" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="hello-plum" aria-label="Ver Hello Plum H16 Ultra 49 mm">
+        <article class="tile" data-id="hello-plum">
+          <a class="tile-stage" href="#producto/hello-plum" aria-label="Ver Hello Plum H16 Ultra 49 mm">
             <span class="tile-badge">El más completo</span><img src="assets/img/productos/hello-plum.webp" alt="Hello Plum H16 Ultra 49 mm" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Hello Plum H16 Ultra 49 mm</h3>
+            <h3 class="tile-name"><a href="#producto/hello-plum">Hello Plum H16 Ultra 49 mm</a></h3>
             <p class="tile-fact">Pantalla AMOLED de 2,02″</p>
             <div class="tile-buy">
               <span class="price">$60</span>
@@ -116,42 +116,12 @@
             </div>
           </div>
         </article>
-        <article class="tile tile-xl" data-id="serie11-nike" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="serie11-nike" aria-label="Ver Serie 11 edición deportiva">
-            <img src="assets/img/productos/serie11-nike.webp" alt="Serie 11 edición deportiva" loading="lazy" decoding="async">
-          </button>
-          <div class="tile-info">
-            <h3 class="tile-name">Serie 11 edición deportiva</h3>
-            <p class="tile-fact">Pantalla cuadrada grande</p>
-            <div class="tile-buy">
-              <span class="price">$35</span>
-              <button class="add" type="button" data-add="serie11-nike" aria-label="Agregar Serie 11 edición deportiva al carrito">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-              </button>
-            </div>
-          </div>
-        </article>
-        <article class="tile tile-xl" data-id="t900-ultra" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="t900-ultra" aria-label="Ver T900 Ultra">
-            <span class="tile-badge">Mejor precio</span><img src="assets/img/productos/t900-ultra.webp" alt="T900 Ultra" loading="lazy" decoding="async">
-          </button>
-          <div class="tile-info">
-            <h3 class="tile-name">T900 Ultra</h3>
-            <p class="tile-fact">Recibe y hace llamadas</p>
-            <div class="tile-buy">
-              <span class="price">$15</span>
-              <button class="add" type="button" data-add="t900-ultra" aria-label="Agregar T900 Ultra al carrito">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-              </button>
-            </div>
-          </div>
-        </article>
-        <article class="tile" data-id="watch7-replica" style="--tono:#EEF1FB">
-          <button class="tile-stage" type="button" data-open="watch7-replica" aria-label="Ver Watch 7 réplica AAA">
+        <article class="tile" data-id="watch7-replica">
+          <a class="tile-stage" href="#producto/watch7-replica" aria-label="Ver Watch 7 réplica AAA">
             <img src="assets/img/productos/watch7-replica.webp" alt="Watch 7 réplica AAA" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Watch 7 réplica AAA</h3>
+            <h3 class="tile-name"><a href="#producto/watch7-replica">Watch 7 réplica AAA</a></h3>
             <p class="tile-fact">Pantalla redonda táctil</p>
             <div class="tile-buy">
               <span class="price">$40</span>
@@ -161,12 +131,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="v20-pro" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="v20-pro" aria-label="Ver V20 Pro con inteligencia artificial">
+        <article class="tile" data-id="v20-pro">
+          <a class="tile-stage" href="#producto/v20-pro" aria-label="Ver V20 Pro con inteligencia artificial">
             <img src="assets/img/productos/v20-pro.webp" alt="V20 Pro con inteligencia artificial" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">V20 Pro con inteligencia artificial</h3>
+            <h3 class="tile-name"><a href="#producto/v20-pro">V20 Pro con inteligencia artificial</a></h3>
             <p class="tile-fact">Asistente con IA por voz</p>
             <div class="tile-buy">
               <span class="price">$40</span>
@@ -176,12 +146,27 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="serie11-clasico" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="serie11-clasico" aria-label="Ver Serie 11 clásico AAA">
-            <img src="assets/img/productos/serie11-clasico.webp" alt="Serie 11 clásico AAA" loading="lazy" decoding="async">
-          </button>
+        <article class="tile" data-id="serie11-nike">
+          <a class="tile-stage" href="#producto/serie11-nike" aria-label="Ver Serie 11 edición deportiva">
+            <img src="assets/img/productos/serie11-nike.webp" alt="Serie 11 edición deportiva" loading="lazy" decoding="async">
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Serie 11 clásico AAA</h3>
+            <h3 class="tile-name"><a href="#producto/serie11-nike">Serie 11 edición deportiva</a></h3>
+            <p class="tile-fact">Pantalla cuadrada grande</p>
+            <div class="tile-buy">
+              <span class="price">$35</span>
+              <button class="add" type="button" data-add="serie11-nike" aria-label="Agregar Serie 11 edición deportiva al carrito">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="tile" data-id="serie11-clasico">
+          <a class="tile-stage" href="#producto/serie11-clasico" aria-label="Ver Serie 11 clásico AAA">
+            <img src="assets/img/productos/serie11-clasico.webp" alt="Serie 11 clásico AAA" loading="lazy" decoding="async">
+          </a>
+          <div class="tile-info">
+            <h3 class="tile-name"><a href="#producto/serie11-clasico">Serie 11 clásico AAA</a></h3>
             <p class="tile-fact">Pantalla cuadrada grande</p>
             <div class="tile-buy">
               <span class="price">$35</span>
@@ -191,12 +176,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="watch7-audifonos" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="watch7-audifonos" aria-label="Ver Watch 7 con audífonos">
+        <article class="tile" data-id="watch7-audifonos">
+          <a class="tile-stage" href="#producto/watch7-audifonos" aria-label="Ver Watch 7 con audífonos">
             <img src="assets/img/productos/watch7-audifonos.webp" alt="Watch 7 con audífonos" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Watch 7 con audífonos</h3>
+            <h3 class="tile-name"><a href="#producto/watch7-audifonos">Watch 7 con audífonos</a></h3>
             <p class="tile-fact">Reloj + audífonos inalámbricos</p>
             <div class="tile-buy">
               <span class="price">$30</span>
@@ -206,12 +191,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="l500-pro" style="--tono:#EEF1FB">
-          <button class="tile-stage" type="button" data-open="l500-pro" aria-label="Ver L500 Pro">
+        <article class="tile" data-id="l500-pro">
+          <a class="tile-stage" href="#producto/l500-pro" aria-label="Ver L500 Pro">
             <img src="assets/img/productos/l500-pro.webp" alt="L500 Pro" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">L500 Pro</h3>
+            <h3 class="tile-name"><a href="#producto/l500-pro">L500 Pro</a></h3>
             <p class="tile-fact">Pantalla redonda</p>
             <div class="tile-buy">
               <span class="price">$30</span>
@@ -221,12 +206,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="watch7" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="watch7" aria-label="Ver Watch 7 Max">
+        <article class="tile" data-id="watch7">
+          <a class="tile-stage" href="#producto/watch7" aria-label="Ver Watch 7 Max">
             <img src="assets/img/productos/watch7.webp" alt="Watch 7 Max" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Watch 7 Max</h3>
+            <h3 class="tile-name"><a href="#producto/watch7">Watch 7 Max</a></h3>
             <p class="tile-fact">Pantalla AMOLED redonda</p>
             <div class="tile-buy">
               <span class="price">$28</span>
@@ -236,12 +221,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="gt5-pro" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="gt5-pro" aria-label="Ver GT5 Pro+">
+        <article class="tile" data-id="gt5-pro">
+          <a class="tile-stage" href="#producto/gt5-pro" aria-label="Ver GT5 Pro+">
             <img src="assets/img/productos/gt5-pro.webp" alt="GT5 Pro+" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">GT5 Pro+</h3>
+            <h3 class="tile-name"><a href="#producto/gt5-pro">GT5 Pro+</a></h3>
             <p class="tile-fact">Pantalla AMOLED redonda</p>
             <div class="tile-buy">
               <span class="price">$28</span>
@@ -251,12 +236,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="c15-pro" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="c15-pro" aria-label="Ver C15 Pro">
+        <article class="tile" data-id="c15-pro">
+          <a class="tile-stage" href="#producto/c15-pro" aria-label="Ver C15 Pro">
             <img src="assets/img/productos/c15-pro.webp" alt="C15 Pro" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">C15 Pro</h3>
+            <h3 class="tile-name"><a href="#producto/c15-pro">C15 Pro</a></h3>
             <p class="tile-fact">Dos correas: silicona y metal</p>
             <div class="tile-buy">
               <span class="price">$25</span>
@@ -266,12 +251,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="d2000" style="--tono:#EEF1FB">
-          <button class="tile-stage" type="button" data-open="d2000" aria-label="Ver D2000 Ultra">
+        <article class="tile" data-id="d2000">
+          <a class="tile-stage" href="#producto/d2000" aria-label="Ver D2000 Ultra">
             <img src="assets/img/productos/d2000.webp" alt="D2000 Ultra" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">D2000 Ultra</h3>
+            <h3 class="tile-name"><a href="#producto/d2000">D2000 Ultra</a></h3>
             <p class="tile-fact">Diseño Ultra redondo</p>
             <div class="tile-buy">
               <span class="price">$22</span>
@@ -281,12 +266,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="c30" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="c30" aria-label="Ver C30 Pro Big">
+        <article class="tile" data-id="c30">
+          <a class="tile-stage" href="#producto/c30" aria-label="Ver C30 Pro Big">
             <img src="assets/img/productos/c30.webp" alt="C30 Pro Big" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">C30 Pro Big</h3>
+            <h3 class="tile-name"><a href="#producto/c30">C30 Pro Big</a></h3>
             <p class="tile-fact">Pantalla grande de 2,19″</p>
             <div class="tile-buy">
               <span class="price">$22</span>
@@ -296,12 +281,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="h11" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="h11" aria-label="Ver H11">
+        <article class="tile" data-id="h11">
+          <a class="tile-stage" href="#producto/h11" aria-label="Ver H11">
             <img src="assets/img/productos/h11.webp" alt="H11" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">H11</h3>
+            <h3 class="tile-name"><a href="#producto/h11">H11</a></h3>
             <p class="tile-fact">Caja robusta tipo outdoor</p>
             <div class="tile-buy">
               <span class="price">$22</span>
@@ -311,12 +296,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="s9-ultra" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="s9-ultra" aria-label="Ver S9 Ultra">
+        <article class="tile" data-id="s9-ultra">
+          <a class="tile-stage" href="#producto/s9-ultra" aria-label="Ver S9 Ultra">
             <img src="assets/img/productos/s9-ultra.webp" alt="S9 Ultra" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">S9 Ultra</h3>
+            <h3 class="tile-name"><a href="#producto/s9-ultra">S9 Ultra</a></h3>
             <p class="tile-fact">Tres correas incluidas</p>
             <div class="tile-buy">
               <span class="price">$20</span>
@@ -326,12 +311,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="gts6" style="--tono:#EEF1FB">
-          <button class="tile-stage" type="button" data-open="gts6" aria-label="Ver GTS 6">
+        <article class="tile" data-id="gts6">
+          <a class="tile-stage" href="#producto/gts6" aria-label="Ver GTS 6">
             <img src="assets/img/productos/gts6.webp" alt="GTS 6" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">GTS 6</h3>
+            <h3 class="tile-name"><a href="#producto/gts6">GTS 6</a></h3>
             <p class="tile-fact">Pantalla redonda elegante</p>
             <div class="tile-buy">
               <span class="price">$20</span>
@@ -341,12 +326,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="t10-mini" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="t10-mini" aria-label="Ver T10 Mini">
+        <article class="tile" data-id="t10-mini">
+          <a class="tile-stage" href="#producto/t10-mini" aria-label="Ver T10 Mini">
             <img src="assets/img/productos/t10-mini.webp" alt="T10 Mini" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">T10 Mini</h3>
+            <h3 class="tile-name"><a href="#producto/t10-mini">T10 Mini</a></h3>
             <p class="tile-fact">Tamaño compacto de 41 mm</p>
             <div class="tile-buy">
               <span class="price">$20</span>
@@ -356,12 +341,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="t20" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="t20" aria-label="Ver T20 Ultra">
+        <article class="tile" data-id="t20">
+          <a class="tile-stage" href="#producto/t20" aria-label="Ver T20 Ultra">
             <img src="assets/img/productos/t20.webp" alt="T20 Ultra" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">T20 Ultra</h3>
+            <h3 class="tile-name"><a href="#producto/t20">T20 Ultra</a></h3>
             <p class="tile-fact">Cuatro correas incluidas</p>
             <div class="tile-buy">
               <span class="price">$18</span>
@@ -371,12 +356,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="reloj-camara" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="reloj-camara" aria-label="Ver X10 Ultra 3 con cámara">
+        <article class="tile" data-id="reloj-camara">
+          <a class="tile-stage" href="#producto/reloj-camara" aria-label="Ver X10 Ultra 3 con cámara">
             <img src="assets/img/productos/reloj-camara.webp" alt="X10 Ultra 3 con cámara" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">X10 Ultra 3 con cámara</h3>
+            <h3 class="tile-name"><a href="#producto/reloj-camara">X10 Ultra 3 con cámara</a></h3>
             <p class="tile-fact">Cámara integrada</p>
             <div class="tile-buy">
               <span class="price">$18</span>
@@ -386,12 +371,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="t900-promax" style="--tono:#EEF1FB">
-          <button class="tile-stage" type="button" data-open="t900-promax" aria-label="Ver T900 Pro Max Serie 11">
+        <article class="tile" data-id="t900-promax">
+          <a class="tile-stage" href="#producto/t900-promax" aria-label="Ver T900 Pro Max Serie 11">
             <img src="assets/img/productos/t900-promax.webp" alt="T900 Pro Max Serie 11" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">T900 Pro Max Serie 11</h3>
+            <h3 class="tile-name"><a href="#producto/t900-promax">T900 Pro Max Serie 11</a></h3>
             <p class="tile-fact">Pantalla Big de 2,3″</p>
             <div class="tile-buy">
               <span class="price">$18</span>
@@ -401,12 +386,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="t900-big" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="t900-big" aria-label="Ver T900 Ultra 2 Big">
+        <article class="tile" data-id="t900-big">
+          <a class="tile-stage" href="#producto/t900-big" aria-label="Ver T900 Ultra 2 Big">
             <img src="assets/img/productos/t900-big.webp" alt="T900 Ultra 2 Big" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">T900 Ultra 2 Big</h3>
+            <h3 class="tile-name"><a href="#producto/t900-big">T900 Ultra 2 Big</a></h3>
             <p class="tile-fact">Pantalla Big de 2,19″</p>
             <div class="tile-buy">
               <span class="price">$17</span>
@@ -416,12 +401,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="mini-serie11" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="mini-serie11" aria-label="Ver Mini Serie 11">
+        <article class="tile" data-id="mini-serie11">
+          <a class="tile-stage" href="#producto/mini-serie11" aria-label="Ver Mini Serie 11">
             <img src="assets/img/productos/mini-serie11.webp" alt="Mini Serie 11" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Mini Serie 11</h3>
+            <h3 class="tile-name"><a href="#producto/mini-serie11">Mini Serie 11</a></h3>
             <p class="tile-fact">Tamaño mini</p>
             <div class="tile-buy">
               <span class="price">$17</span>
@@ -431,16 +416,31 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="hiwatch-pro" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="hiwatch-pro" aria-label="Ver HiWatch Pro">
+        <article class="tile" data-id="hiwatch-pro">
+          <a class="tile-stage" href="#producto/hiwatch-pro" aria-label="Ver HiWatch Pro">
             <img src="assets/img/productos/hiwatch-pro.webp" alt="HiWatch Pro" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">HiWatch Pro</h3>
+            <h3 class="tile-name"><a href="#producto/hiwatch-pro">HiWatch Pro</a></h3>
             <p class="tile-fact">App HiWatch Pro</p>
             <div class="tile-buy">
               <span class="price">$16</span>
               <button class="add" type="button" data-add="hiwatch-pro" aria-label="Agregar HiWatch Pro al carrito">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="tile" data-id="t900-ultra">
+          <a class="tile-stage" href="#producto/t900-ultra" aria-label="Ver T900 Ultra">
+            <span class="tile-badge">Mejor precio</span><img src="assets/img/productos/t900-ultra.webp" alt="T900 Ultra" loading="lazy" decoding="async">
+          </a>
+          <div class="tile-info">
+            <h3 class="tile-name"><a href="#producto/t900-ultra">T900 Ultra</a></h3>
+            <p class="tile-fact">Recibe y hace llamadas</p>
+            <div class="tile-buy">
+              <span class="price">$15</span>
+              <button class="add" type="button" data-add="t900-ultra" aria-label="Agregar T900 Ultra al carrito">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
               </button>
             </div>
@@ -456,12 +456,12 @@
         <p class="cat-intro">Estuche de carga, pantalla con batería y modelos tipo zarcillo que no se caen.</p>
       </header>
       <div class="mosaic">
-        <article class="tile tile-xl" data-id="audifonos-q10" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="audifonos-q10" aria-label="Ver Audífonos dobles Q10">
+        <article class="tile" data-id="audifonos-q10">
+          <a class="tile-stage" href="#producto/audifonos-q10" aria-label="Ver Audífonos dobles Q10">
             <img src="assets/img/productos/audifonos-q10.webp" alt="Audífonos dobles Q10" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Audífonos dobles Q10</h3>
+            <h3 class="tile-name"><a href="#producto/audifonos-q10">Audífonos dobles Q10</a></h3>
             <p class="tile-fact">Dos pares en un estuche</p>
             <div class="tile-buy">
               <span class="price">$22</span>
@@ -471,12 +471,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="audifonos-gq25" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="audifonos-gq25" aria-label="Ver Audífonos zarcillo GQ-25">
+        <article class="tile" data-id="audifonos-gq25">
+          <a class="tile-stage" href="#producto/audifonos-gq25" aria-label="Ver Audífonos zarcillo GQ-25">
             <img src="assets/img/productos/audifonos-gq25.webp" alt="Audífonos zarcillo GQ-25" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Audífonos zarcillo GQ-25</h3>
+            <h3 class="tile-name"><a href="#producto/audifonos-gq25">Audífonos zarcillo GQ-25</a></h3>
             <p class="tile-fact">Se enganchan a la oreja</p>
             <div class="tile-buy">
               <span class="price">$18</span>
@@ -486,12 +486,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="audifonos-s88" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="audifonos-s88" aria-label="Ver Audífonos S88">
+        <article class="tile" data-id="audifonos-s88">
+          <a class="tile-stage" href="#producto/audifonos-s88" aria-label="Ver Audífonos S88">
             <img src="assets/img/productos/audifonos-s88.webp" alt="Audífonos S88" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Audífonos S88</h3>
+            <h3 class="tile-name"><a href="#producto/audifonos-s88">Audífonos S88</a></h3>
             <p class="tile-fact">Pantalla de batería en el estuche</p>
             <div class="tile-buy">
               <span class="price">$18</span>
@@ -501,12 +501,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="audifonos-x51" style="--tono:#EEF1FB">
-          <button class="tile-stage" type="button" data-open="audifonos-x51" aria-label="Ver Audífonos zarcillo X51">
+        <article class="tile" data-id="audifonos-x51">
+          <a class="tile-stage" href="#producto/audifonos-x51" aria-label="Ver Audífonos zarcillo X51">
             <img src="assets/img/productos/audifonos-x51.webp" alt="Audífonos zarcillo X51" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Audífonos zarcillo X51</h3>
+            <h3 class="tile-name"><a href="#producto/audifonos-x51">Audífonos zarcillo X51</a></h3>
             <p class="tile-fact">Tipo zarcillo, abiertos</p>
             <div class="tile-buy">
               <span class="price">$15</span>
@@ -516,12 +516,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="audifonos-pods" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="audifonos-pods" aria-label="Ver Audífonos tipo AirPods">
+        <article class="tile" data-id="audifonos-pods">
+          <a class="tile-stage" href="#producto/audifonos-pods" aria-label="Ver Audífonos tipo AirPods">
             <img src="assets/img/productos/audifonos-pods.webp" alt="Audífonos tipo AirPods" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Audífonos tipo AirPods</h3>
+            <h3 class="tile-name"><a href="#producto/audifonos-pods">Audífonos tipo AirPods</a></h3>
             <p class="tile-fact">Estuche compacto</p>
             <div class="tile-buy">
               <span class="price">$15</span>
@@ -541,12 +541,12 @@
         <p class="cat-intro">Astronautas que proyectan estrellas y nebulosas en el techo. El regalo que siempre emociona.</p>
       </header>
       <div class="mosaic">
-        <article class="tile tile-xl" data-id="astronauta-musica" style="--tono:#1A1F55">
-          <button class="tile-stage" type="button" data-open="astronauta-musica" aria-label="Ver Astronauta proyector con música">
+        <article class="tile" data-id="astronauta-musica">
+          <a class="tile-stage" href="#producto/astronauta-musica" aria-label="Ver Astronauta proyector con música">
             <span class="tile-badge">Con música</span><img src="assets/img/productos/astronauta-musica.webp" alt="Astronauta proyector con música" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Astronauta proyector con música</h3>
+            <h3 class="tile-name"><a href="#producto/astronauta-musica">Astronauta proyector con música</a></h3>
             <p class="tile-fact">Parlante Bluetooth integrado</p>
             <div class="tile-buy">
               <span class="price">$25</span>
@@ -556,12 +556,12 @@
             </div>
           </div>
         </article>
-        <article class="tile tile-xl" data-id="proyector-nebulosa" style="--tono:#232A6B">
-          <button class="tile-stage" type="button" data-open="proyector-nebulosa" aria-label="Ver Proyector de nebulosa con base">
+        <article class="tile" data-id="proyector-nebulosa">
+          <a class="tile-stage" href="#producto/proyector-nebulosa" aria-label="Ver Proyector de nebulosa con base">
             <img src="assets/img/productos/proyector-nebulosa.webp" alt="Proyector de nebulosa con base" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Proyector de nebulosa con base</h3>
+            <h3 class="tile-name"><a href="#producto/proyector-nebulosa">Proyector de nebulosa con base</a></h3>
             <p class="tile-fact">Base lunar</p>
             <div class="tile-buy">
               <span class="price">$22</span>
@@ -581,12 +581,12 @@
         <p class="cat-intro">Bruma fresca, luces de colores y tu esencia favorita para la mesita, el escritorio o el carro.</p>
       </header>
       <div class="mosaic">
-        <article class="tile tile-xl" data-id="hum-luces" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="hum-luces" aria-label="Ver Humidificador de luces">
+        <article class="tile" data-id="hum-luces">
+          <a class="tile-stage" href="#producto/hum-luces" aria-label="Ver Humidificador de luces">
             <span class="tile-badge">Nuevo</span><img src="assets/img/productos/hum-luces.webp" alt="Humidificador de luces" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Humidificador de luces</h3>
+            <h3 class="tile-name"><a href="#producto/hum-luces">Humidificador de luces</a></h3>
             <p class="tile-fact">Cinco chorros de bruma</p>
             <div class="tile-buy">
               <span class="price">$20</span>
@@ -596,42 +596,12 @@
             </div>
           </div>
         </article>
-        <article class="tile tile-xl" data-id="hum-jardin-flores" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="hum-jardin-flores" aria-label="Ver Humidificador jardín de flores">
-            <img src="assets/img/productos/hum-jardin-flores.webp" alt="Humidificador jardín de flores" loading="lazy" decoding="async">
-          </button>
-          <div class="tile-info">
-            <h3 class="tile-name">Humidificador jardín de flores</h3>
-            <p class="tile-fact">Flores dentro de la cúpula</p>
-            <div class="tile-buy">
-              <span class="price">$15</span>
-              <button class="add" type="button" data-add="hum-jardin-flores" aria-label="Agregar Humidificador jardín de flores al carrito">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-              </button>
-            </div>
-          </div>
-        </article>
-        <article class="tile tile-xl" data-id="hum-nave" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="hum-nave" aria-label="Ver Humidificador nave espacial">
-            <img src="assets/img/productos/hum-nave.webp" alt="Humidificador nave espacial" loading="lazy" decoding="async">
-          </button>
-          <div class="tile-info">
-            <h3 class="tile-name">Humidificador nave espacial</h3>
-            <p class="tile-fact">Forma de nave</p>
-            <div class="tile-buy">
-              <span class="price">$8</span>
-              <button class="add" type="button" data-add="hum-nave" aria-label="Agregar Humidificador nave espacial al carrito">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-              </button>
-            </div>
-          </div>
-        </article>
-        <article class="tile" data-id="hum-volcan" style="--tono:#EEF1FB">
-          <button class="tile-stage" type="button" data-open="hum-volcan" aria-label="Ver Humidificador volcán">
+        <article class="tile" data-id="hum-volcan">
+          <a class="tile-stage" href="#producto/hum-volcan" aria-label="Ver Humidificador volcán">
             <img src="assets/img/productos/hum-volcan.webp" alt="Humidificador volcán" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Humidificador volcán</h3>
+            <h3 class="tile-name"><a href="#producto/hum-volcan">Humidificador volcán</a></h3>
             <p class="tile-fact">Bruma con efecto de llama</p>
             <div class="tile-buy">
               <span class="price">$18</span>
@@ -641,12 +611,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="hum-sunset" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="hum-sunset" aria-label="Ver Humidificador sunset">
+        <article class="tile" data-id="hum-sunset">
+          <a class="tile-stage" href="#producto/hum-sunset" aria-label="Ver Humidificador sunset">
             <img src="assets/img/productos/hum-sunset.webp" alt="Humidificador sunset" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Humidificador sunset</h3>
+            <h3 class="tile-name"><a href="#producto/hum-sunset">Humidificador sunset</a></h3>
             <p class="tile-fact">Lámpara de atardecer</p>
             <div class="tile-buy">
               <span class="price">$15</span>
@@ -656,12 +626,27 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="hum-flor" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="hum-flor" aria-label="Ver Humidificador de flor">
-            <img src="assets/img/productos/hum-flor.webp" alt="Humidificador de flor" loading="lazy" decoding="async">
-          </button>
+        <article class="tile" data-id="hum-jardin-flores">
+          <a class="tile-stage" href="#producto/hum-jardin-flores" aria-label="Ver Humidificador jardín de flores">
+            <img src="assets/img/productos/hum-jardin-flores.webp" alt="Humidificador jardín de flores" loading="lazy" decoding="async">
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Humidificador de flor</h3>
+            <h3 class="tile-name"><a href="#producto/hum-jardin-flores">Humidificador jardín de flores</a></h3>
+            <p class="tile-fact">Flores dentro de la cúpula</p>
+            <div class="tile-buy">
+              <span class="price">$15</span>
+              <button class="add" type="button" data-add="hum-jardin-flores" aria-label="Agregar Humidificador jardín de flores al carrito">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="tile" data-id="hum-flor">
+          <a class="tile-stage" href="#producto/hum-flor" aria-label="Ver Humidificador de flor">
+            <img src="assets/img/productos/hum-flor.webp" alt="Humidificador de flor" loading="lazy" decoding="async">
+          </a>
+          <div class="tile-info">
+            <h3 class="tile-name"><a href="#producto/hum-flor">Humidificador de flor</a></h3>
             <p class="tile-fact">Acabado tipo madera</p>
             <div class="tile-buy">
               <span class="price">$15</span>
@@ -671,12 +656,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="hum-madera-floral" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="hum-madera-floral" aria-label="Ver Humidificador de madera floral">
+        <article class="tile" data-id="hum-madera-floral">
+          <a class="tile-stage" href="#producto/hum-madera-floral" aria-label="Ver Humidificador de madera floral">
             <img src="assets/img/productos/hum-madera-floral.webp" alt="Humidificador de madera floral" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Humidificador de madera floral</h3>
+            <h3 class="tile-name"><a href="#producto/hum-madera-floral">Humidificador de madera floral</a></h3>
             <p class="tile-fact">Forma de florero</p>
             <div class="tile-buy">
               <span class="price">$15</span>
@@ -686,12 +671,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="hum-madera" style="--tono:#EEF1FB">
-          <button class="tile-stage" type="button" data-open="hum-madera" aria-label="Ver Humidificador de madera">
+        <article class="tile" data-id="hum-madera">
+          <a class="tile-stage" href="#producto/hum-madera" aria-label="Ver Humidificador de madera">
             <img src="assets/img/productos/hum-madera.webp" alt="Humidificador de madera" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Humidificador de madera</h3>
+            <h3 class="tile-name"><a href="#producto/hum-madera">Humidificador de madera</a></h3>
             <p class="tile-fact">Oscuro o claro</p>
             <div class="tile-buy">
               <span class="price">$8</span>
@@ -701,12 +686,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="hum-osito" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="hum-osito" aria-label="Ver Humidificador de osito">
+        <article class="tile" data-id="hum-osito">
+          <a class="tile-stage" href="#producto/hum-osito" aria-label="Ver Humidificador de osito">
             <img src="assets/img/productos/hum-osito.webp" alt="Humidificador de osito" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Humidificador de osito</h3>
+            <h3 class="tile-name"><a href="#producto/hum-osito">Humidificador de osito</a></h3>
             <p class="tile-fact">Diseño de osito</p>
             <div class="tile-buy">
               <span class="price">$8</span>
@@ -716,12 +701,27 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="hum-domo" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="hum-domo" aria-label="Ver Humidificador domo">
-            <img src="assets/img/productos/hum-domo.webp" alt="Humidificador domo" loading="lazy" decoding="async">
-          </button>
+        <article class="tile" data-id="hum-nave">
+          <a class="tile-stage" href="#producto/hum-nave" aria-label="Ver Humidificador nave espacial">
+            <img src="assets/img/productos/hum-nave.webp" alt="Humidificador nave espacial" loading="lazy" decoding="async">
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Humidificador domo</h3>
+            <h3 class="tile-name"><a href="#producto/hum-nave">Humidificador nave espacial</a></h3>
+            <p class="tile-fact">Forma de nave</p>
+            <div class="tile-buy">
+              <span class="price">$8</span>
+              <button class="add" type="button" data-add="hum-nave" aria-label="Agregar Humidificador nave espacial al carrito">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="tile" data-id="hum-domo">
+          <a class="tile-stage" href="#producto/hum-domo" aria-label="Ver Humidificador domo">
+            <img src="assets/img/productos/hum-domo.webp" alt="Humidificador domo" loading="lazy" decoding="async">
+          </a>
+          <div class="tile-info">
+            <h3 class="tile-name"><a href="#producto/hum-domo">Humidificador domo</a></h3>
             <p class="tile-fact">Compacto</p>
             <div class="tile-buy">
               <span class="price">$5</span>
@@ -731,12 +731,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="esencias" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="esencias" aria-label="Ver Esencias para humidificador">
+        <article class="tile" data-id="esencias">
+          <a class="tile-stage" href="#producto/esencias" aria-label="Ver Esencias para humidificador">
             <img src="assets/img/productos/esencias.webp" alt="Esencias para humidificador" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Esencias para humidificador</h3>
+            <h3 class="tile-name"><a href="#producto/esencias">Esencias para humidificador</a></h3>
             <p class="tile-fact">Frutales, florales y frescas</p>
             <div class="tile-buy">
               <span class="price">$2</span>
@@ -756,12 +756,12 @@
         <p class="cat-intro">Lámparas con espejos que multiplican las flores hasta el infinito. Las armamos por ti o te las llevas para armar.</p>
       </header>
       <div class="mosaic">
-        <article class="tile tile-xl" data-id="jardin-hexagonal" style="--tono:#1A1F55">
-          <button class="tile-stage" type="button" data-open="jardin-hexagonal" aria-label="Ver Lámpara hexagonal de girasoles">
+        <article class="tile" data-id="jardin-hexagonal">
+          <a class="tile-stage" href="#producto/jardin-hexagonal" aria-label="Ver Lámpara hexagonal de girasoles">
             <span class="tile-badge">El regalo</span><img src="assets/img/productos/jardin-hexagonal.webp" alt="Lámpara hexagonal de girasoles" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Lámpara hexagonal de girasoles</h3>
+            <h3 class="tile-name"><a href="#producto/jardin-hexagonal">Lámpara hexagonal de girasoles</a></h3>
             <p class="tile-fact">Efecto de espejo infinito</p>
             <div class="tile-buy">
               <span class="price">desde $15</span>
@@ -771,27 +771,12 @@
             </div>
           </div>
         </article>
-        <article class="tile tile-xl" data-id="cubo-girasoles" style="--tono:#232A6B">
-          <button class="tile-stage" type="button" data-open="cubo-girasoles" aria-label="Ver Cubo de girasoles">
-            <img src="assets/img/productos/cubo-girasoles.webp" alt="Cubo de girasoles" loading="lazy" decoding="async">
-          </button>
-          <div class="tile-info">
-            <h3 class="tile-name">Cubo de girasoles</h3>
-            <p class="tile-fact">Cubo de espejo infinito</p>
-            <div class="tile-buy">
-              <span class="price">desde $12</span>
-              <button class="add" type="button" data-add="cubo-girasoles" aria-label="Agregar Cubo de girasoles al carrito">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-              </button>
-            </div>
-          </div>
-        </article>
-        <article class="tile" data-id="jardin-hex-tulipanes" style="--tono:#161B47">
-          <button class="tile-stage" type="button" data-open="jardin-hex-tulipanes" aria-label="Ver Lámpara hexagonal de tulipanes">
+        <article class="tile" data-id="jardin-hex-tulipanes">
+          <a class="tile-stage" href="#producto/jardin-hex-tulipanes" aria-label="Ver Lámpara hexagonal de tulipanes">
             <img src="assets/img/productos/jardin-hex-tulipanes.webp" alt="Lámpara hexagonal de tulipanes" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Lámpara hexagonal de tulipanes</h3>
+            <h3 class="tile-name"><a href="#producto/jardin-hex-tulipanes">Lámpara hexagonal de tulipanes</a></h3>
             <p class="tile-fact">Efecto de espejo infinito</p>
             <div class="tile-buy">
               <span class="price">desde $15</span>
@@ -801,12 +786,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="jardin-hexagonales" style="--tono:#2B2380">
-          <button class="tile-stage" type="button" data-open="jardin-hexagonales" aria-label="Ver Lámpara hexagonal de rosas">
+        <article class="tile" data-id="jardin-hexagonales">
+          <a class="tile-stage" href="#producto/jardin-hexagonales" aria-label="Ver Lámpara hexagonal de rosas">
             <img src="assets/img/productos/jardin-hexagonales.webp" alt="Lámpara hexagonal de rosas" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Lámpara hexagonal de rosas</h3>
+            <h3 class="tile-name"><a href="#producto/jardin-hexagonales">Lámpara hexagonal de rosas</a></h3>
             <p class="tile-fact">Efecto de espejo infinito</p>
             <div class="tile-buy">
               <span class="price">desde $15</span>
@@ -816,12 +801,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="jardin-rosas" style="--tono:#1A1F55">
-          <button class="tile-stage" type="button" data-open="jardin-rosas" aria-label="Ver Jardín de rosas infinitas">
+        <article class="tile" data-id="jardin-rosas">
+          <a class="tile-stage" href="#producto/jardin-rosas" aria-label="Ver Jardín de rosas infinitas">
             <img src="assets/img/productos/jardin-rosas.webp" alt="Jardín de rosas infinitas" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Jardín de rosas infinitas</h3>
+            <h3 class="tile-name"><a href="#producto/jardin-rosas">Jardín de rosas infinitas</a></h3>
             <p class="tile-fact">Cubo de espejo infinito</p>
             <div class="tile-buy">
               <span class="price">desde $12</span>
@@ -831,12 +816,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="cubo-tulipanes" style="--tono:#232A6B">
-          <button class="tile-stage" type="button" data-open="cubo-tulipanes" aria-label="Ver Cubo de tulipanes infinitos">
+        <article class="tile" data-id="cubo-tulipanes">
+          <a class="tile-stage" href="#producto/cubo-tulipanes" aria-label="Ver Cubo de tulipanes infinitos">
             <img src="assets/img/productos/cubo-tulipanes.webp" alt="Cubo de tulipanes infinitos" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Cubo de tulipanes infinitos</h3>
+            <h3 class="tile-name"><a href="#producto/cubo-tulipanes">Cubo de tulipanes infinitos</a></h3>
             <p class="tile-fact">Cubo de espejo infinito</p>
             <div class="tile-buy">
               <span class="price">desde $12</span>
@@ -846,12 +831,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="rosas-infinitas" style="--tono:#161B47">
-          <button class="tile-stage" type="button" data-open="rosas-infinitas" aria-label="Ver Nube de rosas infinitas">
+        <article class="tile" data-id="rosas-infinitas">
+          <a class="tile-stage" href="#producto/rosas-infinitas" aria-label="Ver Nube de rosas infinitas">
             <img src="assets/img/productos/rosas-infinitas.webp" alt="Nube de rosas infinitas" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Nube de rosas infinitas</h3>
+            <h3 class="tile-name"><a href="#producto/rosas-infinitas">Nube de rosas infinitas</a></h3>
             <p class="tile-fact">Forma de nube</p>
             <div class="tile-buy">
               <span class="price">desde $12</span>
@@ -861,12 +846,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="margaritas" style="--tono:#2B2380">
-          <button class="tile-stage" type="button" data-open="margaritas" aria-label="Ver Jardín de margaritas infinitas">
+        <article class="tile" data-id="margaritas">
+          <a class="tile-stage" href="#producto/margaritas" aria-label="Ver Jardín de margaritas infinitas">
             <img src="assets/img/productos/margaritas.webp" alt="Jardín de margaritas infinitas" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Jardín de margaritas infinitas</h3>
+            <h3 class="tile-name"><a href="#producto/margaritas">Jardín de margaritas infinitas</a></h3>
             <p class="tile-fact">Cubo de espejo infinito</p>
             <div class="tile-buy">
               <span class="price">desde $12</span>
@@ -876,12 +861,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="nube" style="--tono:#1A1F55">
-          <button class="tile-stage" type="button" data-open="nube" aria-label="Ver Nube de tulipanes">
+        <article class="tile" data-id="nube">
+          <a class="tile-stage" href="#producto/nube" aria-label="Ver Nube de tulipanes">
             <img src="assets/img/productos/nube.webp" alt="Nube de tulipanes" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Nube de tulipanes</h3>
+            <h3 class="tile-name"><a href="#producto/nube">Nube de tulipanes</a></h3>
             <p class="tile-fact">Forma de nube</p>
             <div class="tile-buy">
               <span class="price">desde $12</span>
@@ -891,12 +876,27 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="girasoles" style="--tono:#232A6B">
-          <button class="tile-stage" type="button" data-open="girasoles" aria-label="Ver Nube de girasoles infinitos">
-            <img src="assets/img/productos/girasoles.webp" alt="Nube de girasoles infinitos" loading="lazy" decoding="async">
-          </button>
+        <article class="tile" data-id="cubo-girasoles">
+          <a class="tile-stage" href="#producto/cubo-girasoles" aria-label="Ver Cubo de girasoles">
+            <img src="assets/img/productos/cubo-girasoles.webp" alt="Cubo de girasoles" loading="lazy" decoding="async">
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Nube de girasoles infinitos</h3>
+            <h3 class="tile-name"><a href="#producto/cubo-girasoles">Cubo de girasoles</a></h3>
+            <p class="tile-fact">Cubo de espejo infinito</p>
+            <div class="tile-buy">
+              <span class="price">desde $12</span>
+              <button class="add" type="button" data-add="cubo-girasoles" aria-label="Agregar Cubo de girasoles al carrito">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="tile" data-id="girasoles">
+          <a class="tile-stage" href="#producto/girasoles" aria-label="Ver Nube de girasoles infinitos">
+            <img src="assets/img/productos/girasoles.webp" alt="Nube de girasoles infinitos" loading="lazy" decoding="async">
+          </a>
+          <div class="tile-info">
+            <h3 class="tile-name"><a href="#producto/girasoles">Nube de girasoles infinitos</a></h3>
             <p class="tile-fact">Forma de nube</p>
             <div class="tile-buy">
               <span class="price">desde $12</span>
@@ -916,12 +916,12 @@
         <p class="cat-intro">Rosas eternas, lamparitas recargables para el cuarto del bebé y esferas de cristal 3D.</p>
       </header>
       <div class="mosaic">
-        <article class="tile" data-id="rosas-eternas" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="rosas-eternas" aria-label="Ver Rosa eterna en cúpula">
+        <article class="tile" data-id="rosas-eternas">
+          <a class="tile-stage" href="#producto/rosas-eternas" aria-label="Ver Rosa eterna en cúpula">
             <img src="assets/img/productos/rosas-eternas.webp" alt="Rosa eterna en cúpula" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Rosa eterna en cúpula</h3>
+            <h3 class="tile-name"><a href="#producto/rosas-eternas">Rosa eterna en cúpula</a></h3>
             <p class="tile-fact">Rosa con luces en cúpula de cristal</p>
             <div class="tile-buy">
               <span class="price">$15</span>
@@ -931,12 +931,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="lampara-pera" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="lampara-pera" aria-label="Ver Lámpara recargable tipo pera">
+        <article class="tile" data-id="lampara-pera">
+          <a class="tile-stage" href="#producto/lampara-pera" aria-label="Ver Lámpara recargable tipo pera">
             <img src="assets/img/productos/lampara-pera.webp" alt="Lámpara recargable tipo pera" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Lámpara recargable tipo pera</h3>
+            <h3 class="tile-name"><a href="#producto/lampara-pera">Lámpara recargable tipo pera</a></h3>
             <p class="tile-fact">Hasta 8 horas de luz</p>
             <div class="tile-buy">
               <span class="price">$15</span>
@@ -946,12 +946,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="lamparas-noche" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="lamparas-noche" aria-label="Ver Lámparas de noche animalitos">
+        <article class="tile" data-id="lamparas-noche">
+          <a class="tile-stage" href="#producto/lamparas-noche" aria-label="Ver Lámparas de noche animalitos">
             <img src="assets/img/productos/lamparas-noche.webp" alt="Lámparas de noche animalitos" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Lámparas de noche animalitos</h3>
+            <h3 class="tile-name"><a href="#producto/lamparas-noche">Lámparas de noche animalitos</a></h3>
             <p class="tile-fact">Recargables</p>
             <div class="tile-buy">
               <span class="price">$12</span>
@@ -961,12 +961,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="esfera-cristal" style="--tono:#EEF1FB">
-          <button class="tile-stage" type="button" data-open="esfera-cristal" aria-label="Ver Esfera de cristal 3D">
+        <article class="tile" data-id="esfera-cristal">
+          <a class="tile-stage" href="#producto/esfera-cristal" aria-label="Ver Esfera de cristal 3D">
             <img src="assets/img/productos/esfera-cristal.webp" alt="Esfera de cristal 3D" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Esfera de cristal 3D</h3>
+            <h3 class="tile-name"><a href="#producto/esfera-cristal">Esfera de cristal 3D</a></h3>
             <p class="tile-fact">Grabado 3D en cristal</p>
             <div class="tile-buy">
               <span class="price">$8</span>
@@ -986,12 +986,12 @@
         <p class="cat-intro">Sin tinta: papel térmico para notas, agendas, stickers y recuerdos.</p>
       </header>
       <div class="mosaic">
-        <article class="tile" data-id="combo-impresora" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="combo-impresora" aria-label="Ver Combo mini impresora">
+        <article class="tile" data-id="combo-impresora">
+          <a class="tile-stage" href="#producto/combo-impresora" aria-label="Ver Combo mini impresora">
             <span class="tile-badge">Combo</span><img src="assets/img/productos/combo-impresora.webp" alt="Combo mini impresora" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Combo mini impresora</h3>
+            <h3 class="tile-name"><a href="#producto/combo-impresora">Combo mini impresora</a></h3>
             <p class="tile-fact">Impresora + rollos de colores</p>
             <div class="tile-buy">
               <span class="price">$30</span>
@@ -1001,12 +1001,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="impresora-gato" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="impresora-gato" aria-label="Ver Mini impresora térmica">
+        <article class="tile" data-id="impresora-gato">
+          <a class="tile-stage" href="#producto/impresora-gato" aria-label="Ver Mini impresora térmica">
             <img src="assets/img/productos/impresora-gato.webp" alt="Mini impresora térmica" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Mini impresora térmica</h3>
+            <h3 class="tile-name"><a href="#producto/impresora-gato">Mini impresora térmica</a></h3>
             <p class="tile-fact">Imprime por Bluetooth</p>
             <div class="tile-buy">
               <span class="price">$25</span>
@@ -1016,12 +1016,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="impresora-recargable" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="impresora-recargable" aria-label="Ver Mini impresora recargable">
+        <article class="tile" data-id="impresora-recargable">
+          <a class="tile-stage" href="#producto/impresora-recargable" aria-label="Ver Mini impresora recargable">
             <img src="assets/img/productos/impresora-recargable.webp" alt="Mini impresora recargable" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Mini impresora recargable</h3>
+            <h3 class="tile-name"><a href="#producto/impresora-recargable">Mini impresora recargable</a></h3>
             <p class="tile-fact">Batería recargable</p>
             <div class="tile-buy">
               <span class="price">$25</span>
@@ -1031,12 +1031,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="rollitos" style="--tono:#EEF1FB">
-          <button class="tile-stage" type="button" data-open="rollitos" aria-label="Ver Rollitos para mini impresora">
+        <article class="tile" data-id="rollitos">
+          <a class="tile-stage" href="#producto/rollitos" aria-label="Ver Rollitos para mini impresora">
             <img src="assets/img/productos/rollitos.webp" alt="Rollitos para mini impresora" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Rollitos para mini impresora</h3>
+            <h3 class="tile-name"><a href="#producto/rollitos">Rollitos para mini impresora</a></h3>
             <p class="tile-fact">Blancos, de colores o sticker</p>
             <div class="tile-buy">
               <span class="price">$2</span>
@@ -1056,12 +1056,12 @@
         <p class="cat-intro">Consolas portátiles con cientos de juegos de los de antes. Se conectan al televisor.</p>
       </header>
       <div class="mosaic">
-        <article class="tile tile-xl" data-id="sup-x7m" style="--tono:#1A1F55">
-          <button class="tile-stage" type="button" data-open="sup-x7m" aria-label="Ver Consola SUP X7M">
+        <article class="tile" data-id="sup-x7m">
+          <a class="tile-stage" href="#producto/sup-x7m" aria-label="Ver Consola SUP X7M">
             <img src="assets/img/productos/sup-x7m.webp" alt="Consola SUP X7M" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Consola SUP X7M</h3>
+            <h3 class="tile-name"><a href="#producto/sup-x7m">Consola SUP X7M</a></h3>
             <p class="tile-fact">Mando extra para dos jugadores</p>
             <div class="tile-buy">
               <span class="price">$28</span>
@@ -1071,12 +1071,12 @@
             </div>
           </div>
         </article>
-        <article class="tile tile-xl" data-id="sup-g5" style="--tono:#232A6B">
-          <button class="tile-stage" type="button" data-open="sup-g5" aria-label="Ver Consola SUP G5">
+        <article class="tile" data-id="sup-g5">
+          <a class="tile-stage" href="#producto/sup-g5" aria-label="Ver Consola SUP G5">
             <img src="assets/img/productos/sup-g5.webp" alt="Consola SUP G5" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Consola SUP G5</h3>
+            <h3 class="tile-name"><a href="#producto/sup-g5">Consola SUP G5</a></h3>
             <p class="tile-fact">Juegos clásicos incluidos</p>
             <div class="tile-buy">
               <span class="price">$15</span>
@@ -1096,12 +1096,12 @@
         <p class="cat-intro">Correas de 44 a 49 mm, protectores y charms para estrenar sin cambiar de reloj.</p>
       </header>
       <div class="mosaic">
-        <article class="tile tile-xl" data-id="charms-correas" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="charms-correas" aria-label="Ver Charms para correas">
+        <article class="tile" data-id="charms-correas">
+          <a class="tile-stage" href="#producto/charms-correas" aria-label="Ver Charms para correas">
             <img src="assets/img/productos/charms-correas.webp" alt="Charms para correas" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Charms para correas</h3>
+            <h3 class="tile-name"><a href="#producto/charms-correas">Charms para correas</a></h3>
             <p class="tile-fact">Set de accesorios dorados</p>
             <div class="tile-buy">
               <span class="price">$10</span>
@@ -1111,12 +1111,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="protector-pantalla" style="--tono:#FFFFFF">
-          <button class="tile-stage" type="button" data-open="protector-pantalla" aria-label="Ver Protector de pantalla para reloj">
+        <article class="tile" data-id="protector-pantalla">
+          <a class="tile-stage" href="#producto/protector-pantalla" aria-label="Ver Protector de pantalla para reloj">
             <img src="assets/img/productos/protector-pantalla.webp" alt="Protector de pantalla para reloj" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Protector de pantalla para reloj</h3>
+            <h3 class="tile-name"><a href="#producto/protector-pantalla">Protector de pantalla para reloj</a></h3>
             <p class="tile-fact">44 a 49 mm</p>
             <div class="tile-buy">
               <span class="price">$6</span>
@@ -1126,12 +1126,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="protector-cargador" style="--tono:#DDF5F8">
-          <button class="tile-stage" type="button" data-open="protector-cargador" aria-label="Ver Protector para cargador">
+        <article class="tile" data-id="protector-cargador">
+          <a class="tile-stage" href="#producto/protector-cargador" aria-label="Ver Protector para cargador">
             <img src="assets/img/productos/protector-cargador.webp" alt="Protector para cargador" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Protector para cargador</h3>
+            <h3 class="tile-name"><a href="#producto/protector-cargador">Protector para cargador</a></h3>
             <p class="tile-fact">Set de 3 piezas de goma</p>
             <div class="tile-buy">
               <span class="price">$6</span>
@@ -1141,12 +1141,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="correas-corrugadas" style="--tono:#EEF1FB">
-          <button class="tile-stage" type="button" data-open="correas-corrugadas" aria-label="Ver Correas corrugadas">
+        <article class="tile" data-id="correas-corrugadas">
+          <a class="tile-stage" href="#producto/correas-corrugadas" aria-label="Ver Correas corrugadas">
             <img src="assets/img/productos/correas-corrugadas.webp" alt="Correas corrugadas" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Correas corrugadas</h3>
+            <h3 class="tile-name"><a href="#producto/correas-corrugadas">Correas corrugadas</a></h3>
             <p class="tile-fact">44 a 49 mm</p>
             <div class="tile-buy">
               <span class="price">$5</span>
@@ -1156,12 +1156,12 @@
             </div>
           </div>
         </article>
-        <article class="tile" data-id="correas-lisas" style="--tono:#E6ECFF">
-          <button class="tile-stage" type="button" data-open="correas-lisas" aria-label="Ver Correas lisas">
+        <article class="tile" data-id="correas-lisas">
+          <a class="tile-stage" href="#producto/correas-lisas" aria-label="Ver Correas lisas">
             <img src="assets/img/productos/correas-lisas.webp" alt="Correas lisas" loading="lazy" decoding="async">
-          </button>
+          </a>
           <div class="tile-info">
-            <h3 class="tile-name">Correas lisas</h3>
+            <h3 class="tile-name"><a href="#producto/correas-lisas">Correas lisas</a></h3>
             <p class="tile-fact">44 a 49 mm</p>
             <div class="tile-buy">
               <span class="price">$5</span>
@@ -1179,15 +1179,15 @@
     <div class="wrap how-grid">
       <h2 id="how-t" class="how-title">Tres pasos y suena el “ding”.</h2>
       <ol class="steps">
-        <li class="step" style="--h:30vh"><div class="step-tile"><img src="assets/img/productos/t900-ultra.webp" alt="" loading="lazy"></div><h3>Arma tu carrito</h3><p>Toca el “+” en lo que te guste. Puedes llevar varios productos en un solo pedido.</p></li>
-        <li class="step" style="--h:42vh"><div class="step-tile"><img src="assets/img/productos/hum-luces.webp" alt="" loading="lazy"></div><h3>Dinos cómo lo quieres</h3><p>Delivery en Barinas, envío nacional o entrega personal. Pagas con pago móvil, efectivo, Binance o Zinli.</p></li>
-        <li class="step" style="--h:56vh"><div class="step-tile"><img src="assets/img/productos/astronauta-musica.webp" alt="" loading="lazy"></div><h3>Te escribimos por WhatsApp</h3><p>El pedido te llega listo al chat, confirmamos y te lo llevamos. Al resto del país va con número de guía.</p></li>
+        <li class="step" style="--h:30vh"><div class="step-tile"><img src="assets/img/productos/serie11-clasico.webp" alt="" loading="lazy"></div><h3>Arma tu carrito</h3><p>Toca el “+” en lo que te guste. Puedes llevar varios productos en un solo pedido.</p></li>
+        <li class="step" style="--h:42vh"><div class="step-tile"><img src="assets/img/productos/v20-pro.webp" alt="" loading="lazy"></div><h3>Dinos cómo lo quieres</h3><p>Delivery en Barinas, envío nacional o entrega personal. Pagas con pago móvil, efectivo, Binance o Zinli.</p></li>
+        <li class="step" style="--h:56vh"><div class="step-tile"><img src="assets/img/productos/hello-plum.webp" alt="" loading="lazy"></div><h3>Te escribimos por WhatsApp</h3><p>El pedido te llega listo al chat, confirmamos y te lo llevamos. Al resto del país va con número de guía.</p></li>
       </ol>
     </div>
   </section>
 
   <section class="close" aria-labelledby="close-t">
-    <div class="close-img" aria-hidden="true"><img src="assets/img/productos/jardin-hexagonal.webp" alt="" loading="lazy"></div>
+    <div class="close-img" aria-hidden="true"><img src="assets/img/productos/t900-ultra.webp" alt="" loading="lazy"></div>
     <div class="close-copy">
       <h2 id="close-t">¿Te lo llevamos hoy?</h2>
       <p>Escríbenos y te ayudamos a escoger: para ti, para regalar o para la casa.</p>
@@ -1225,25 +1225,29 @@
 
 <a class="wa-float" href="https://wa.me/584124195521?text=%C2%A1Hola%2C%20Tecnoding%21%20%F0%9F%91%8B%20Quiero%20informaci%C3%B3n%20sobre%20sus%20productos." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
 
-<!-- Ficha de producto -->
-<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-name" hidden>
-  <div class="sheet-back" data-close></div>
-  <div class="sheet-panel">
-    <button class="sheet-x" type="button" data-close aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-    <div class="sheet-media">
-      <div class="sheet-stage" id="sheet-stage"><img id="sheet-img" src="assets/img/isotipo.svg" alt=""></div>
-      <div class="sheet-thumbs" id="sheet-thumbs" aria-label="Fotos reales del producto"></div>
+<!-- Página de producto, en primer plano -->
+<div class="pdp" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-name" hidden>
+  <div class="pdp-bar">
+    <button class="pdp-back" type="button" data-close>← Volver a la tienda</button>
+  </div>
+  <div class="pdp-in wrap">
+    <div class="pdp-media">
+      <div class="pdp-stage" id="sheet-stage"><img id="sheet-img" src="assets/img/isotipo.svg" alt=""></div>
+      <div class="sheet-thumbs" id="sheet-thumbs" aria-label="Más fotos del producto"></div>
     </div>
-    <div class="sheet-copy">
+    <div class="pdp-copy">
       <p class="sheet-cat" id="sheet-cat"></p>
       <h2 id="sheet-name"></h2>
+      <p class="pdp-price"><span class="price price-lg" id="sheet-price"></span></p>
+      <h3 class="pdp-h">Características principales</h3>
       <ul class="sheet-specs" id="sheet-specs"></ul>
+      <fieldset class="swatches" id="sheet-colors" hidden><legend>Color: <b id="sheet-color-name"></b></legend><div id="sheet-color-list"></div></fieldset>
       <fieldset class="variants" id="sheet-variants" hidden><legend>Versión</legend><div id="sheet-variant-list"></div></fieldset>
-      <div class="sheet-buy">
-        <span class="price price-lg" id="sheet-price"></span>
+      <div class="pdp-buy">
         <div class="qty" aria-label="Cantidad"><button type="button" data-qty="-1" aria-label="Menos">−</button><output id="sheet-qty">1</output><button type="button" data-qty="1" aria-label="Más">+</button></div>
+        <button class="btn btn-primary" type="button" id="sheet-add">Agregar al carrito</button>
       </div>
-      <button class="btn btn-primary btn-block" type="button" id="sheet-add">Agregar al carrito</button>
+      <p class="pdp-note">Delivery en Barinas y envíos a toda Venezuela. ¿Dudas? Te asesoramos por WhatsApp.</p>
     </div>
   </div>
 </div>
@@ -1303,6 +1307,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="assets/js/catalogo.js" defer></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
 <script src="assets/js/main.js" defer></script>
+<script type="module" src="assets/js/estrellas.js"></script>
 </body>
 </html>
