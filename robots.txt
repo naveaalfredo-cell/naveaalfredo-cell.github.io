@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://naveaalfredo-cell.github.io/sitemap.xml
